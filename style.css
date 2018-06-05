@@ -1,9 +1,47 @@
+body {
+    font-family: 'Roboto', sans-serif;
+}
+
 #srb__mainContainer {
     margin-top: 20px;
 }
 
 #srb__status {
     background-color: #bbd3f9;
+    height: 400px;
+    text-align: center;
 }
 
 
+#srb__status h1 {
+    font-size: 32px;
+    margin: 0;
+    padding: 0;
+}
+
+#srb__status h2 {
+    font-size: 18px;
+    margin: 0;
+    padding: 0;
+    color: #555;
+}
+
+#srb__status table {
+    margin: auto;
+}
+
+#srb__status td {
+    width: 100%;
+    padding: 5px;
+}
+
+#srb__status table td:nth-of-type(1) {
+    text-align: right;
+    font-weight: bold;
+    width: 60%;
+}
+
+#srb__status table td:nth-of-type(2) {
+    text-align: left;
+    width: 40%;
+}
