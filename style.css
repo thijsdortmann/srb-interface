@@ -45,3 +45,43 @@ body {
     text-align: left;
     width: 40%;
 }
+
+.ct-area {
+    fill-opacity: 0.2;
+}
+
+.past {
+    fill: #80c8e5;
+    stroke: #80c8e5;
+}
+
+.past .ct-point {
+    stroke: none;
+}
+
+.future-accurate {
+    fill: #42f4b3;
+    stroke: #42f4b3;
+}
+
+.future-accurate .ct-point {
+    stroke: none;
+}
+
+.future-estimated {
+    fill: #89f441;
+    stroke: #89f441;
+}
+
+.future-estimated .ct-point {
+    stroke: none;
+}
+
+.event {
+    fill: none;
+    stroke: none;
+}
+
+.event .ct-point {
+    stroke: #000;
+}

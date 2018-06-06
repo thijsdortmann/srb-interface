@@ -5,6 +5,8 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 
+    <link rel="stylesheet" href="//cdn.jsdelivr.net/chartist.js/latest/chartist.min.css">
+
     <!-- Bootstrap CSS -->
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.1/css/bootstrap.min.css" integrity="sha384-WskhaSGFgHYWDcbwN70/dfYBj47jz9qbsMId/iRN3ewGhXQFZCSftd1LZCfmhktB" crossorigin="anonymous">
     <link rel="stylesheet" href="style.css">
@@ -20,107 +22,89 @@
     <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarsExampleDefault" aria-controls="navbarsExampleDefault" aria-expanded="false" aria-label="Toggle navigation">
         <span class="navbar-toggler-icon"></span>
     </button>
-
-    <div class="collapse navbar-collapse" id="navbarsExampleDefault">
-        <ul class="navbar-nav mr-auto">
-            <li class="nav-item active">
-                <a class="nav-link" href="#">Home <span class="sr-only">(current)</span></a>
-            </li>
-            <li class="nav-item">
-                <a class="nav-link" href="#">Link</a>
-            </li>
-            <li class="nav-item">
-                <a class="nav-link disabled" href="#">Disabled</a>
-            </li>
-            <li class="nav-item dropdown">
-                <a class="nav-link dropdown-toggle" href="http://example.com" id="dropdown01" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Dropdown</a>
-                <div class="dropdown-menu" aria-labelledby="dropdown01">
-                    <a class="dropdown-item" href="#">Action</a>
-                    <a class="dropdown-item" href="#">Another action</a>
-                    <a class="dropdown-item" href="#">Something else here</a>
-                </div>
-            </li>
-        </ul>
-        <form class="form-inline my-2 my-lg-0">
-            <input class="form-control mr-sm-2" type="text" placeholder="Search" aria-label="Search">
-            <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Search</button>
-        </form>
-    </div>
 </nav>
 
 <main role="main">
 
     <div class="container" id="srb__mainContainer">
 
-        <div class="col-md-4">
-            <div class="card" id="srb__status">
-                <div class="card-body">
-                    <h1>Your Buffer</h1>
-                    <h2>S.L. Louwesstraat 49</h2>
+        <div class="row">
+            <div class="col-md-4">
+                <div class="card" id="srb__status">
+                    <div class="card-body">
+                        <h1>Your Buffer</h1>
+                        <h2>S.L. Louwesstraat 49</h2>
 
-                    <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 387.61 455" style="width: 150px; margin: 20px;" id="srb__status_graphic">
-                        <defs>
-                            <style>
-                                .cls-1,.cls-5 {
-                                    fill:none;
-                                }
-                                .cls-2 {
-                                    clip-path:url('#clip-path');
-                                }
-                                .cls-3 {
-                                    fill:#39c;
-                                }
-                                .cls-4 {
-                                    fill:#4d4d4d;
-                                }
-                                .cls-4,.cls-5 {
-                                    stroke:#4d4d4d;
-                                    stroke-miterlimit:10;
-                                    stroke-width:5px;
-                                }
-                                .cls-6 {
-                                    font-size:115.54px;
-                                    font-family: 'Roboto', sans-serif;
-                                    font-weight: bold;
-                                }
-                                .cls-7 {
-                                    font-size:40px;
-                                    font-family: 'Roboto', sans-serif;
-                                    font-weight: lighter;
-                                }
-                            </style>
-                            <clipPath id="clip-path">
-                                <path class="cls-1" d="M364.31,454.5h-340l-15-193V14.5c61.66-3,123.26-9,185-9s123.33,6,185,9v247Z"/>
-                            </clipPath>
-                        </defs>
-                        <g id="Layer_2" data-name="Layer 2">
-                            <g id="Layer_1-2" data-name="Layer 1">
-                                <g class="cls-2">
-                                    <rect class="cls-3" x="-9.31" y="-210" width="370" height="435" id="srb__status_graphic_fillLevel" transform="rotate(180, 185, 121)"/>
+                        <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 387.61 455" style="width: 150px; margin: 20px;" id="srb__status_graphic">
+                            <defs>
+                                <style>
+                                    .cls-1,.cls-5 {
+                                        fill:none;
+                                    }
+                                    .cls-2 {
+                                        clip-path:url('#clip-path');
+                                    }
+                                    .cls-3 {
+                                        fill:#39c;
+                                    }
+                                    .cls-4 {
+                                        fill:#4d4d4d;
+                                    }
+                                    .cls-4,.cls-5 {
+                                        stroke:#4d4d4d;
+                                        stroke-miterlimit:10;
+                                        stroke-width:5px;
+                                    }
+                                    .cls-6 {
+                                        font-size:115.54px;
+                                        font-family: 'Roboto', sans-serif;
+                                        font-weight: bold;
+                                    }
+                                    .cls-7 {
+                                        font-size:40px;
+                                        font-family: 'Roboto', sans-serif;
+                                        font-weight: lighter;
+                                    }
+                                </style>
+                                <clipPath id="clip-path">
+                                    <path class="cls-1" d="M364.31,454.5h-340l-15-193V14.5c61.66-3,123.26-9,185-9s123.33,6,185,9v247Z"/>
+                                </clipPath>
+                            </defs>
+                            <g id="Layer_2" data-name="Layer 2">
+                                <g id="Layer_1-2" data-name="Layer 1">
+                                    <g class="cls-2">
+                                        <rect class="cls-3" x="-9.31" y="-210" width="370" height="0" id="srb__status_graphic_fillLevel" transform="rotate(180, 185, 121)"/>
+                                    </g>
+
+                                    <path class="cls-5" d="M364.31,451.5h-340l-15-193V11.5c61.66-3,123.26-9,185-9s123.33,6,185,9v247Z"/>
+                                    <text class="cls-6" transform="translate(200 245)" id="srb__status_graphic_fillPercentage" text-anchor="middle"></text>
+                                    <text class="cls-7" transform="translate(200 300)" id="srb__status_graphic_fillLiters" text-anchor="middle"></text>
                                 </g>
-
-                                <path class="cls-5" d="M364.31,451.5h-340l-15-193V11.5c61.66-3,123.26-9,185-9s123.33,6,185,9v247Z"/>
-                                <text class="cls-6" transform="translate(200 245)" id="srb__status_graphic_fillPercentage" text-anchor="middle">90%</text>
-                                <text class="cls-7" transform="translate(200 300)" id="srb__status_graphic_fillLiters" text-anchor="middle">(180 L)</text>
                             </g>
-                        </g>
-                    </svg>
+                        </svg>
 
-                    <table>
-                        <tr>
-                            <td>Water health</td>
-                            <td>Good</td>
-                        </tr>
-                        <tr>
-                            <td>Water temperature</td>
-                            <td>22 &#8451;</td>
-                        </tr>
-                    </table>
+                        <table>
+                            <tr>
+                                <td>Water health</td>
+                                <td>Good</td>
+                            </tr>
+                            <tr>
+                                <td>Water temperature</td>
+                                <td>22 &#8451;</td>
+                            </tr>
+                        </table>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-md-8">
+                <div class="card" id="srb__fillLevel">
+                    <div class="card-body">
+                        <div class="ct-chart ct-golden-section" id="chart1"></div>
+                    </div>
                 </div>
             </div>
         </div>
-
-
 
     </div> <!-- /container -->
 
@@ -134,8 +118,9 @@
 <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous"></script>
 <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.1/js/bootstrap.min.js" integrity="sha384-smHYKdLADwkXOn1EmN1qk/HfnUcbVRZyYmZ4qpPea6sjB/pTJ0euyQp0Mk8ck+5T" crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.22.2/moment-with-locales.min.js"></script>
 <script src="https://d3js.org/d3.v5.min.js"></script>
-
+<script src="//cdn.jsdelivr.net/chartist.js/latest/chartist.min.js"></script>
 
 <script>
     var graphic_fillLevel_height = 435;
@@ -145,9 +130,133 @@
         d3.select('#srb__status_graphic_fillPercentage').text(Math.ceil((current / total) * 100)  + ' %');
         d3.select('#srb__status_graphic_fillLiters').text('(' + Math.ceil(current) + ' L)');
     }
+
+    function createGraphic(data, events, element, currentDt, accurateMs) {
+        var allGraphData = [];
+        var pastGraphData = [];
+        var futureAccGraphData = [];
+        var futureEstGraphData = [];
+
+        var eventsGraphData = [];
+
+        for(var i = 0; i < data.length; i++) {
+            var d = data[i];
+
+            var formattedData = {x: new Date(d.ms), y: d.value };
+
+            allGraphData.push(formattedData);
+
+            if(d.ms <= currentDt) {
+                pastGraphData.push(formattedData);
+            } else if(d.ms > currentDt && d.ms < currentDt + accurateMs) {
+                if(futureAccGraphData.length === 0) futureAccGraphData.push(pastGraphData[pastGraphData.length - 1]);
+                futureAccGraphData.push(formattedData);
+            } else {
+                if(futureEstGraphData.length === 0) futureEstGraphData.push(futureAccGraphData[futureAccGraphData.length - 1]);
+                futureEstGraphData.push(formattedData);
+            }
+        }
+
+        for(var i = 0; i < events.length; i++) {
+            var e = events[i];
+
+            var selectIndex = null;
+
+            for(var j = 0; j < data.length; j++) {
+                if(j === data.length - 2) {
+                    selectIndex = data.length - 2;
+                    break;
+                }
+
+                if(e.ms >= data[j].ms && e.ms < data[j+1].ms) {
+                    selectIndex = j;
+                    break;
+                }
+            }
+
+            eventsGraphData.push({ x:new Date(data[selectIndex].ms), y:data[selectIndex].value, meta: e.event });
+        }
+
+        new Chartist.Line(element, {
+            series: [
+                {
+                    data: pastGraphData,
+                    className: 'past'
+                },
+                {
+                    data: futureAccGraphData,
+                    className: 'future-accurate'
+                },
+                {
+                    data: futureEstGraphData,
+                    className: 'future-estimated'
+                },
+                {
+                    data: eventsGraphData,
+                    className: 'event'
+                }
+            ]
+        }, {
+            showArea: true,
+            low: 0,
+            axisX: {
+                type: Chartist.FixedScaleAxis,
+                divisor: 10,
+                labelInterpolationFnc: function(value) {
+                    return moment(value).format('H:mm:ss');
+                }
+            }
+        }).on("draw", function(data) {
+            if (data.type === "point" && data.series.className === 'event') {
+                data.element._node.setAttribute("data-content", data.meta);
+            }
+        }).on("created", function() {
+            // Initiate Tooltip
+            $(element).popover({
+                selector: '.event .ct-point',
+                container: 'body',
+                html: true,
+                trigger: 'hover',
+                offset: '0, 5px'
+            });
+        });
+    }
+
+    $(document).ready(function() {
+        setCurrentLevel(100,200);
+
+        var demoData = [{"ms":1528209716000,"value":180},
+            {"ms":1528210316000,"value":180},
+            {"ms":1528210916000,"value":180},
+            {"ms":1528211516000,"value":170},
+            {"ms":1528212116000,"value":160},
+            {"ms":1528212716000,"value":150},
+            {"ms":1528213316000,"value":150},
+            {"ms":1528213916000,"value":150},
+            {"ms":1528214516000,"value":150},
+            {"ms":1528215116000,"value":150},
+            {"ms":1528215716000,"value":170},
+            {"ms":1528216316000,"value":190},
+            {"ms":1528216916000,"value":195},
+            {"ms":1528217516000,"value":195},
+            {"ms":1528218116000,"value":195},
+            {"ms":1528218716000,"value":195},
+            {"ms":1528219316000,"value":195},
+            {"ms":1528219916000,"value":185},
+            {"ms":1528220516000,"value":175},
+            {"ms":1528221116000,"value":175}];
+
+        var demoEvents = [
+            {"ms":1528210916000,"event":"Buffer emptying because of predicted shower."},
+            {"ms":1528215116000,"event":"Shower started."}
+        ];
+
+        createGraphic(demoData, demoEvents, '#chart1', 1528214516000, 3000000);
+
+
+    });
 </script>
 
 
 </body>
 </html>
-
