@@ -27,7 +27,7 @@
     </button>-->
     <div class="ml-auto">
         <div class="navbar-nav ml-auto" id="srb__navbar_status">
-            Status: <div id="indicator"></div>
+            Status: <a id="indicator" tabindex="0"></a>
         </div>
     </div>
 </nav>
@@ -131,52 +131,33 @@
             <div class="col-md-4">
                 <div class="card">
                     <div class="card-body">
-                        <ul class="timeline">
-                            <li>
-                                <div class="timeline-badge"><i class="glyphicon glyphicon-check"></i></div>
-                                <div class="timeline-panel">
-                                    <div class="timeline-heading">
-                                        <h4 class="timeline-title">Mussum ipsum cacilds</h4>
-                                        <p>
-                                            <small class="text-muted"><i class="glyphicon glyphicon-time"></i> 11 hours
-                                                ago via Twitter
-                                            </small>
-                                        </p>
-                                    </div>
-                                    <div class="timeline-body">
-                                        <p>Mussum ipsum cacilds, vidis litro abertis.</p>
-                                    </div>
-                                </div>
-                            </li>
-                            <li class="timeline-inverted">
-                                <div class="timeline-badge warning"><i class="glyphicon glyphicon-credit-card"></i>
-                                </div>
-                                <div class="timeline-panel">
-                                    <div class="timeline-heading">
-                                        <h4 class="timeline-title">Mussum ipsum cacilds</h4>
-                                    </div>
-                                    <div class="timeline-body">
-                                        <p>Mussum ipsum cacilds, vidis litro abertis.</p>
 
-                                    </div>
-                                </div>
-                            </li>
-                        </ul>
                     </div>
                 </div>
             </div>
 
-            <div class="col-md-8">
-                <div class="card" id="srb__usage">
+            <div class="col-md-5">
+                <div class="card" id="srb__rainfall">
                     <div class="card-header">
-                        Usage
+                        Rainfall
                     </div>
                     <div class="card-body">
-                        <div class="ct-chart" id="usageChart"></div>
+                        <div class="ct-chart" id="rainfallChart"></div>
                     </div>
                 </div>
             </div>
 
+            <div class="col-md-3" id="srb__competitive">
+                <div class="card" id="competitiveChartContainer">
+                    <div class="card-body">
+                        <div class="ct-chart ct-square" id="competitiveChart"></div>
+                        <div id="complimentContainer">
+                            <h1 id="compliment"></h1>
+                            <p id="details"></p>
+                        </div>
+                    </div>
+                </div>
+            </div>
 
         </div>
 
