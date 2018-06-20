@@ -1,18 +1,492 @@
 var srb = {
     defaultDischargeTime: 7200000,
+    bufferCapacity: null,
 
     init: function () {
         this.setCurrentLevel(100, 200);
 
-        var demoData = [{"ms": 1528209716000, "value": 180},
-            {"ms": 1528210316000, "value": 180},
-            {"ms": 1528210916000, "value": 180},
-            {"ms": 1528211516000, "value": 170},
-            {"ms": 1528212116000, "value": 160},
-            {"ms": 1528212716000, "value": 150},
-            {"ms": 1528213316000, "value": 150},
-            {"ms": 1528213916000, "value": 150},
-            {"ms": 1528214516000, "value": 150}];
+        var demoData =[
+            {
+                "ms": 1529517506000,
+                "value": 300
+            },
+            {
+                "ms": 1529517566000,
+                "value": 300
+            },
+            {
+                "ms": 1529517626000,
+                "value": 300
+            },
+            {
+                "ms": 1529517686000,
+                "value": 300
+            },
+            {
+                "ms": 1529517746000,
+                "value": 300
+            },
+            {
+                "ms": 1529517806000,
+                "value": 300
+            },
+            {
+                "ms": 1529517866000,
+                "value": 300
+            },
+            {
+                "ms": 1529517926000,
+                "value": 300
+            },
+            {
+                "ms": 1529517986000,
+                "value": 300
+            },
+            {
+                "ms": 1529518046000,
+                "value": 300
+            },
+            {
+                "ms": 1529518106000,
+                "value": 300
+            },
+            {
+                "ms": 1529518166000,
+                "value": 300
+            },
+            {
+                "ms": 1529518226000,
+                "value": 300
+            },
+            {
+                "ms": 1529518286000,
+                "value": 300
+            },
+            {
+                "ms": 1529518346000,
+                "value": 300
+            },
+            {
+                "ms": 1529518406000,
+                "value": 300
+            },
+            {
+                "ms": 1529518466000,
+                "value": 300
+            },
+            {
+                "ms": 1529518526000,
+                "value": 300
+            },
+            {
+                "ms": 1529518586000,
+                "value": 300
+            },
+            {
+                "ms": 1529518646000,
+                "value": 300
+            },
+            {
+                "ms": 1529518706000,
+                "value": 300
+            },
+            {
+                "ms": 1529518766000,
+                "value": 300
+            },
+            {
+                "ms": 1529518826000,
+                "value": 300
+            },
+            {
+                "ms": 1529518886000,
+                "value": 300
+            },
+            {
+                "ms": 1529518946000,
+                "value": 300
+            },
+            {
+                "ms": 1529519006000,
+                "value": 300
+            },
+            {
+                "ms": 1529519066000,
+                "value": 300
+            },
+            {
+                "ms": 1529519126000,
+                "value": 300
+            },
+            {
+                "ms": 1529519186000,
+                "value": 300
+            },
+            {
+                "ms": 1529519246000,
+                "value": 300
+            },
+            {
+                "ms": 1529519306000,
+                "value": 300
+            },
+            {
+                "ms": 1529519366000,
+                "value": 300
+            },
+            {
+                "ms": 1529519426000,
+                "value": 300
+            },
+            {
+                "ms": 1529519486000,
+                "value": 300
+            },
+            {
+                "ms": 1529519546000,
+                "value": 300
+            },
+            {
+                "ms": 1529519606000,
+                "value": 300
+            },
+            {
+                "ms": 1529519666000,
+                "value": 300
+            },
+            {
+                "ms": 1529519726000,
+                "value": 300
+            },
+            {
+                "ms": 1529519786000,
+                "value": 300
+            },
+            {
+                "ms": 1529519846000,
+                "value": 300
+            },
+            {
+                "ms": 1529519906000,
+                "value": 300
+            },
+            {
+                "ms": 1529519966000,
+                "value": 300
+            },
+            {
+                "ms": 1529520026000,
+                "value": 300
+            },
+            {
+                "ms": 1529520086000,
+                "value": 300
+            },
+            {
+                "ms": 1529520146000,
+                "value": 300
+            },
+            {
+                "ms": 1529520206000,
+                "value": 300
+            },
+            {
+                "ms": 1529520266000,
+                "value": 300
+            },
+            {
+                "ms": 1529520326000,
+                "value": 300
+            },
+            {
+                "ms": 1529520386000,
+                "value": 300
+            },
+            {
+                "ms": 1529520446000,
+                "value": 300
+            },
+            {
+                "ms": 1529520506000,
+                "value": 300
+            },
+            {
+                "ms": 1529520566000,
+                "value": 300
+            },
+            {
+                "ms": 1529520626000,
+                "value": 300
+            },
+            {
+                "ms": 1529520686000,
+                "value": 300
+            },
+            {
+                "ms": 1529520746000,
+                "value": 300
+            },
+            {
+                "ms": 1529520806000,
+                "value": 300
+            },
+            {
+                "ms": 1529520866000,
+                "value": 300
+            },
+            {
+                "ms": 1529520926000,
+                "value": 300
+            },
+            {
+                "ms": 1529520986000,
+                "value": 300
+            },
+            {
+                "ms": 1529521046000,
+                "value": 300
+            },
+            {
+                "ms": 1529521106000,
+                "value": 300
+            },
+            {
+                "ms": 1529521166000,
+                "value": 300
+            },
+            {
+                "ms": 1529521226000,
+                "value": 300
+            },
+            {
+                "ms": 1529521286000,
+                "value": 300
+            },
+            {
+                "ms": 1529521346000,
+                "value": 300
+            },
+            {
+                "ms": 1529521406000,
+                "value": 300
+            },
+            {
+                "ms": 1529521466000,
+                "value": 300
+            },
+            {
+                "ms": 1529521526000,
+                "value": 300
+            },
+            {
+                "ms": 1529521586000,
+                "value": 300
+            },
+            {
+                "ms": 1529521646000,
+                "value": 300
+            },
+            {
+                "ms": 1529521706000,
+                "value": 300
+            },
+            {
+                "ms": 1529521766000,
+                "value": 300
+            },
+            {
+                "ms": 1529521826000,
+                "value": 300
+            },
+            {
+                "ms": 1529521886000,
+                "value": 300
+            },
+            {
+                "ms": 1529521946000,
+                "value": 300
+            },
+            {
+                "ms": 1529522006000,
+                "value": 300
+            },
+            {
+                "ms": 1529522066000,
+                "value": 300
+            },
+            {
+                "ms": 1529522126000,
+                "value": 300
+            },
+            {
+                "ms": 1529522186000,
+                "value": 300
+            },
+            {
+                "ms": 1529522246000,
+                "value": 300
+            },
+            {
+                "ms": 1529522306000,
+                "value": 290
+            },
+            {
+                "ms": 1529522366000,
+                "value": 280
+            },
+            {
+                "ms": 1529522426000,
+                "value": 270
+            },
+            {
+                "ms": 1529522486000,
+                "value": 260
+            },
+            {
+                "ms": 1529522546000,
+                "value": 260
+            },
+            {
+                "ms": 1529522606000,
+                "value": 260
+            },
+            {
+                "ms": 1529522666000,
+                "value": 260
+            },
+            {
+                "ms": 1529522726000,
+                "value": 260
+            },
+            {
+                "ms": 1529522786000,
+                "value": 260
+            },
+            {
+                "ms": 1529522846000,
+                "value": 260
+            },
+            {
+                "ms": 1529522906000,
+                "value": 260
+            },
+            {
+                "ms": 1529522966000,
+                "value": 260
+            },
+            {
+                "ms": 1529523026000,
+                "value": 260
+            },
+            {
+                "ms": 1529523086000,
+                "value": 260
+            },
+            {
+                "ms": 1529523146000,
+                "value": 260
+            },
+            {
+                "ms": 1529523206000,
+                "value": 260
+            },
+            {
+                "ms": 1529523266000,
+                "value": 260
+            },
+            {
+                "ms": 1529523326000,
+                "value": 260
+            },
+            {
+                "ms": 1529523386000,
+                "value": 260
+            },
+            {
+                "ms": 1529523446000,
+                "value": 260
+            },
+            {
+                "ms": 1529523506000,
+                "value": 260
+            },
+            {
+                "ms": 1529523566000,
+                "value": 260
+            },
+            {
+                "ms": 1529523626000,
+                "value": 260
+            },
+            {
+                "ms": 1529523686000,
+                "value": 260
+            },
+            {
+                "ms": 1529523746000,
+                "value": 260
+            },
+            {
+                "ms": 1529523806000,
+                "value": 260
+            },
+            {
+                "ms": 1529523866000,
+                "value": 260
+            },
+            {
+                "ms": 1529523926000,
+                "value": 260
+            },
+            {
+                "ms": 1529523986000,
+                "value": 260
+            },
+            {
+                "ms": 1529524046000,
+                "value": 260
+            },
+            {
+                "ms": 1529524106000,
+                "value": 260
+            },
+            {
+                "ms": 1529524166000,
+                "value": 260
+            },
+            {
+                "ms": 1529524226000,
+                "value": 260
+            },
+            {
+                "ms": 1529524286000,
+                "value": 260
+            },
+            {
+                "ms": 1529524346000,
+                "value": 260
+            },
+            {
+                "ms": 1529524406000,
+                "value": 260
+            },
+            {
+                "ms": 1529524466000,
+                "value": 260
+            },
+            {
+                "ms": 1529524526000,
+                "value": 260
+            },
+            {
+                "ms": 1529524586000,
+                "value": 260
+            },
+            {
+                "ms": 1529524646000,
+                "value": 260
+            }
+        ];
 
         var demoRainfall = [{"ms": 1528209716000, "value": 0},
             {"ms": 1528210316000, "value": 0},
@@ -36,55 +510,63 @@ var srb = {
             {"ms": 1528221116000, "value": 0}];
 
         var demoDischarges = [
-            {"ms": 1528210916000, "dischargeType": "rain", "amount": 30},
-            {"ms": 1528221916000, "dischargeType": "rain", "amount": 100}
+            {"ms": 1529522186000, "dischargeType": "rain", "amount": 40},
+            {"ms": 1529525966000, "dischargeType": "rain", "amount": 60},
+            {"ms": 1529536886000, "dischargeType": "rain", "amount": 100}
         ];
 
 
-        var demoUserUsage = [
-            {"month": 0, "year": 2018, "sewage": 5000, "own": 0},
-            {"month": 1, "year": 2018, "sewage": 7000, "own": 0},
-            {"month": 2, "year": 2018, "sewage": 2000, "own": 0},
-            {"month": 3, "year": 2018, "sewage": 1000, "own": 500},
-            {"month": 4, "year": 2018, "sewage": 600, "own": 1000},
-            {"month": 5, "year": 2018, "sewage": 4000, "own": 1300}
-        ];
+        var demoUserBuffered = 6400;
 
-        var demoAvgUsage = [
-            {"month": 0, "year": 2018, "sewage": 4500, "own": 100},
-            {"month": 1, "year": 2018, "sewage": 7000, "own": 0},
-            {"month": 2, "year": 2018, "sewage": 1600, "own": 200},
-            {"month": 3, "year": 2018, "sewage": 900, "own": 300},
-            {"month": 4, "year": 2018, "sewage": 350, "own": 100},
-            {"month": 5, "year": 2018, "sewage": 2900, "own": 50}
-        ];
+        var demoAvgBuffered = 4600;
 
         var demoBufferInfo = {
             "address": "Drienerlolaan 5",
             "waterTemp": 22,
-            "capacity": 200,
-            "level": 150
+            "capacity": 300,
+            "level": 240
         };
 
-        var parsedDischarges = this.parseDischarges(demoDischarges, demoData, 1528214516000, 36000000);
+        this.bufferCapacity = demoBufferInfo.capacity;
+
+        var parsedDischarges = this.parseDischarges(demoDischarges, demoData, 1529524646000, 36000000);
 
         console.log(parsedDischarges);
 
-        this.createCompetitiveGraphic(demoUserUsage, demoAvgUsage, '#competitiveChart', '#srb__competitive #compliment', '#srb__competitive #details');
+        this.createCompetitiveGraphic(demoUserBuffered, demoAvgBuffered, '#competitiveChart', '#srb__competitive #compliment', '#srb__competitive #details');
 
-        this.createEventGraphic(parsedDischarges.fillLevel, parsedDischarges.eventsList, '#chart1', 1528214516000, 3000000);
-        this.createEventGraphic(demoRainfall, null, '#rainfallChart', 1528214516000, 3000000);
+        this.createFillLevelGraphic(parsedDischarges.fillLevel, parsedDischarges.eventsList, '#chart1', 1529524646000, 3000000);
+        this.createRainfallGraph(parsedDischarges.showers, '#rainfallChart', 1529524646000, 3000000);
 
+        this.createTimeline(parsedDischarges.timeline, '#timeline', 1529524646000);
+
+        this.setBufferInfo(demoBufferInfo, "srb__status");
         this.setStatus('warning', [
             {
-                "title": "This is a test.",
-                "content": "Lorem ipsum dolor sit amet."
+                "title": "Risk of legionella!",
+                "content": "Due to the temperature in your buffer, there is a risk of legionella developing. Please be careful when using the water for garden use."
             }
         ]);
     },
 
+    valueAtMs: function (ms, array) {
+    for(var i = 0; i < array.length; i++) {
+        if (i === array.length - 1) {
+            return array[i].value;
+        }
+
+        if (ms > array[i].ms && ms < array[i + 1].ms) {
+            return array[i].value;
+        }
+    }
+},
+
     setBufferInfo: function(infoData, element) {
-        $()
+        console.log(infoData);
+        srb.setCurrentLevel(infoData.level, infoData.capacity);
+        $("#address").text(infoData.address);
+        $("#wTemperature").html(infoData.waterTemp + " &#8451;");
+        $("#wHealth").html((infoData.waterTemp > 20) ? "Risk of legionella" : "Good");
     },
 
     setCurrentLevel: function (current, total) {
@@ -128,23 +610,13 @@ var srb = {
     },
 
     parseDischarges: function(discharges, fillLevel, now, futureParseLimit) {
-        function valueAtMs(ms, array) {
-            for(var i = 0; i < array.length; i++) {
-                if (i === array.length - 1) {
-                    return array[i].value;
-                }
-
-                if (ms > array[i].ms && ms < array[i + 1].ms) {
-                    return array[i].value;
-                }
-            }
-        }
-
         var eventsList = [];
-
         var timeline = [];
+        var showers = [];
 
         var fillDelta = [];
+
+        showers.push({"ms": fillLevel[0].ms, "value": 0});
 
         for(var i = 0; i < discharges.length; i++) {
             var d = discharges[i];
@@ -189,6 +661,21 @@ var srb = {
                         "ms" : rainTime + 300000,
                         "delta" : d.amount
                     });
+
+                    showers.push({
+                        "ms" : rainTime - 1,
+                        "value" : 0
+                    });
+
+                    showers.push({
+                        "ms" : rainTime,
+                        "value" : d.amount
+                    });
+
+                    showers.push({
+                        "ms" : rainTime + 300000,
+                        "value" : 0
+                    });
                 }
             }
 
@@ -228,7 +715,7 @@ var srb = {
             timeline.push({
                 "ms" : eventsList[i].ms - 1,
                 "type" : "fillLevel",
-                "value" : valueAtMs(eventsList[i].ms - 1, fillLevel)
+                "value" : srb.valueAtMs(eventsList[i].ms - 1, fillLevel)
             });
 
             timeline.push({
@@ -251,7 +738,8 @@ var srb = {
         return {
             "fillLevel" : fillLevel,
             "eventsList" : eventsList,
-            "timeline" : timeline
+            "timeline" : timeline,
+            "showers" : showers
         };
     },
 
@@ -316,42 +804,21 @@ var srb = {
     },
 
     createCompetitiveGraphic: function(userData, avgData, element, complimentElement, detailsElement) {
-        var userSewage = 0;
-        var userOwn = 0;
-        var avgSewage = 0;
-        var avgOwn = 0;
-
-        for(var i = 0; i < userData.length; i++) {
-            var currentUserData = userData[i];
-            var currentAvgData = avgData[i];
-
-            userSewage += currentUserData.sewage;
-            userOwn += currentUserData.own;
-            avgSewage += currentAvgData.sewage;
-            avgOwn += currentAvgData.own;
-        }
-
-        var userPercentage = (userOwn / (userOwn + userSewage));
-        var avgPercentage = (avgOwn / (avgOwn + avgSewage));
-
-        var userWin = userPercentage > avgPercentage;
+        var userWin = userData > avgData;
 
         if(userWin) $(complimentElement).text("Great job!");
         else $(complimentElement).text("There is room for improvement");
 
-        $(detailsElement).text("You used " + Math.round((userPercentage * 100) * 10) / 10 + "% of your collected rainwater, while your neighbours used " + Math.round((avgPercentage * 100) * 10) / 10 + "%.");
+        $(detailsElement).text("You kept " + userData + "L rainwater from entering the sewage system during rain, your neighbours kept " + avgData + "L.");
 
         new Chartist.Pie(element, {
-            series: [userPercentage, avgPercentage]
+            series: [userData, avgData]
         }, {
             donut: true,
             donutWidth: 50,
             startAngle: 270,
-            total: (userPercentage + avgPercentage) * 2,
-            showLabel: true,
-            labelInterpolationFnc: function(value) {
-                return Math.round((value * 100) * 10) / 10 + '%';
-            }
+            total: (userData + avgData) * 2,
+            showLabel: true
         }).on('draw', function() {
             var chartEl = $(element + ' .ct-chart-donut');
             chartEl.removeAttr('style');
@@ -361,13 +828,20 @@ var srb = {
 
     },
 
-    createEventGraphic: function (data, events, element, currentDt, accurateMs) {
+    createFillLevelGraphic: function (data, events, element, currentDt, accurateMs) {
         var allGraphData = [];
         var pastGraphData = [];
         var futureAccGraphData = [];
         var futureEstGraphData = [];
 
         var eventsGraphData = [];
+
+        data.push({ "ms": currentDt + accurateMs - 1, "value": srb.valueAtMs(currentDt + accurateMs - 1, data)});
+
+        // Sort fillLevel
+        data = data.sort(function(a, b) {
+            return a.ms - b.ms;
+        });
 
         for (var i = 0; i < data.length; i++) {
             var d = data[i];
@@ -419,17 +893,125 @@ var srb = {
                 {
                     data: futureAccGraphData,
                     className: 'future-accurate',
-                    name: 'Prediction'
+                    name: '2-hour prediction'
                 },
                 {
                     data: futureEstGraphData,
                     className: 'future-estimated',
-                    name: 'Estimation'
+                    name: '10-hour prediction'
                 },
                 {
                     data: eventsGraphData,
                     className: 'event',
                     name: 'Event'
+                },
+                {
+                    data: [{
+                        x: new Date(currentDt),
+                        y: 0
+                    }],
+                    className: 'now'
+                }
+            ]
+        }, {
+            showArea: true,
+            low: 0,
+            high: srb.bufferCapacity,
+            fullWidth: true,
+            height: '300px',
+            axisX: {
+                type: Chartist.FixedScaleAxis,
+                divisor: 6,
+                labelInterpolationFnc: function (value) {
+                    return moment(value).format('H:mm');
+                }
+            },
+            axisY: {
+                labelInterpolationFnc: function (value) {
+                    console.log(srb.bufferCapacity);
+                    return  Math.round(((value / srb.bufferCapacity) * 100)) + '%';
+                },
+                divisor: 5
+            },
+            plugins: [
+                Chartist.plugins.legend({
+                    clickable: false,
+                    classNames: ['past', 'future-accurate', 'future-estimated', 'event'],
+                    legendNames: ['Past', '2-hour prediction', '10-hour prediction', 'Event']
+                })
+            ]
+        }).on("draw", function (data) {
+            if (data.type === "point" && data.series.className === 'event') {
+                data.element._node.setAttribute("data-content", data.meta);
+                data.element._node.setAttribute("data-title", moment(data.value.x).format('H:mm'))
+            }
+
+            if (data.type === "point" && data.series.className === 'now') {
+                data.element._node.setAttribute('y2', 10);
+            }
+        }).on("created", function () {
+            // Initiate Tooltip
+            $(element).popover({
+                selector: '.event .ct-point',
+                container: 'body',
+                html: true,
+                trigger: 'hover',
+                offset: '0, 5px'
+            });
+        });
+    },
+
+    createRainfallGraph: function(rainfallData, element, currentDt, accurateMs) {
+        rainfallData.push({ "ms": currentDt - 1, "value": srb.valueAtMs(currentDt - 1, rainfallData)});
+        rainfallData.push({ "ms": currentDt, "value": srb.valueAtMs(currentDt, rainfallData)});
+        rainfallData.push({ "ms": currentDt + accurateMs - 1, "value": srb.valueAtMs(currentDt + accurateMs - 1, rainfallData)});
+
+        // Sort fillLevel
+        rainfallData = rainfallData.sort(function(a, b) {
+            return a.ms - b.ms;
+        });
+
+        var allGraphData = [];
+        var pastGraphData = [];
+        var futureAccGraphData = [];
+        var futureEstGraphData = [];
+
+        for (var i = 0; i < rainfallData.length; i++) {
+            var d = rainfallData[i];
+
+            var formattedData = {x: new Date(d.ms), y: d.value};
+
+            allGraphData.push(formattedData);
+
+            if (d.ms <= currentDt) {
+                pastGraphData.push(formattedData);
+            } else if (d.ms > currentDt && d.ms < currentDt + accurateMs) {
+                if (futureAccGraphData.length === 0) futureAccGraphData.push(pastGraphData[pastGraphData.length - 1]);
+                futureAccGraphData.push(formattedData);
+            } else {
+                if (futureEstGraphData.length === 0) futureEstGraphData.push(futureAccGraphData[futureAccGraphData.length - 1]);
+                futureEstGraphData.push(formattedData);
+            }
+        }
+
+        console.log(pastGraphData);
+
+        new Chartist.Line(element, {
+            series: [
+                {
+                    data: pastGraphData,
+                    className: 'past',
+                    name: 'Past'
+                },
+                {
+                    data: futureAccGraphData,
+                    className: 'future-accurate',
+                    name: '2-hour prediction'
+                },
+                {
+                    data: futureEstGraphData,
+                    className: 'future-estimated',
+                    name: '10-hour prediction'
                 },
                 {
                     data: [{
@@ -455,31 +1037,35 @@ var srb = {
                 Chartist.plugins.legend({
                     clickable: false,
                     classNames: ['past', 'future-accurate', 'future-estimated', 'event'],
-                    legendNames: ['Past', 'Prediction', 'Estimation', 'Event']
+                    legendNames: ['Past', '2-hour prediction', '10-hour prediction', 'Event']
                 })
             ]
         }).on("draw", function (data) {
-            if (data.type === "point" && data.series.className === 'event') {
-                data.element._node.setAttribute("data-content", data.meta);
-                data.element._node.setAttribute("data-title", moment(data.value.x).format('H:mm'))
-            }
-
             if (data.type === "point" && data.series.className === 'now') {
                 data.element._node.setAttribute('y2', 10);
             }
-        }).on("created", function () {
-            // Initiate Tooltip
-            $(element).popover({
-                selector: '.event .ct-point',
-                container: 'body',
-                html: true,
-                trigger: 'hover',
-                offset: '0, 5px'
-            });
         });
     },
 
-    createTimeline: function(eventData) {
+    createTimeline: function(timelineData, element, now) {
+        var e = $(element);
 
+        e.html("");
+
+        for(var i = 0; i < timelineData.length; i++) {
+            var t = timelineData[i];
+
+            if(t.type === "event") {
+                e.append('<li class="event"><strong>' + moment(t.ms).format('H:mm') + '</strong><br>' + t.value + '</li>');
+            }
+
+            if(t.type === "fillLevel") {
+                e.append('<li class="fillLevel">' + Math.round((t.value / srb.bufferCapacity) * 100) + ' % full</li>')
+            }
+
+            if(t.ms < now && i < timelineData.length-1 && timelineData[i+1].ms > now) {
+                e.append('<li class="now">now</li>');
+            }
+        }
     }
 };

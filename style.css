@@ -76,12 +76,12 @@ body {
 #srb__status table td:nth-of-type(1) {
     text-align: right;
     font-weight: bold;
-    width: 60%;
+    width: 50%;
 }
 
 #srb__status table td:nth-of-type(2) {
     text-align: left;
-    width: 40%;
+    width: 50%;
 }
 
 #srb__fillLevel {
@@ -259,4 +259,58 @@ body {
     background-color: #000;
     border-color: #000;
     border-radius: 50%;
+}
+
+#timeline {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+#timeline li {
+    border-left: #39c 10px solid;
+    padding: 5px 20px;
+}
+
+#timeline li.event {
+     position: relative;
+ }
+
+#timeline li.event:before {
+    position: absolute;
+    content: '';
+    top: 10px;
+    left: -15px;
+    width: 20px;
+    height: 20px;
+    border-radius: 50%;
+    border: #000 8px solid;
+}
+
+#timeline li.fillLevel {
+    position: relative;
+}
+
+#timeline li.fillLevel:before {
+    position: absolute;
+    content: '';
+    top: 12px;
+    left: -19px;
+    width: 30px;
+    height: 10px;
+    background-color: #39c;
+}
+
+#timeline li.now {
+    position: relative;
+    text-align: right;
+}
+
+#timeline li.now:before {
+    position: absolute;
+    content: '';
+    top: 15px;
+    left: -19px;
+    right: 60px;
+    border-top: #ff0000 5px dashed;
 }
