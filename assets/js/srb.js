@@ -735,6 +735,11 @@ var srb = {
             return a.ms - b.ms;
         });
 
+        showers.push({
+            "ms" : now + futureParseLimit,
+            "value" : 0
+        });
+
         return {
             "fillLevel" : fillLevel,
             "eventsList" : eventsList,
@@ -965,6 +970,7 @@ var srb = {
         rainfallData.push({ "ms": currentDt - 1, "value": srb.valueAtMs(currentDt - 1, rainfallData)});
         rainfallData.push({ "ms": currentDt, "value": srb.valueAtMs(currentDt, rainfallData)});
         rainfallData.push({ "ms": currentDt + accurateMs - 1, "value": srb.valueAtMs(currentDt + accurateMs - 1, rainfallData)});
+        rainfallData.push({ "ms": currentDt + accurateMs , "value": srb.valueAtMs(currentDt + accurateMs - 1, rainfallData)});
 
         // Sort fillLevel
         rainfallData = rainfallData.sort(function(a, b) {
