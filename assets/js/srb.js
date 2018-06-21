@@ -814,7 +814,7 @@ var srb = {
         if(userWin) $(complimentElement).text("Great job!");
         else $(complimentElement).text("There is room for improvement");
 
-        $(detailsElement).text("You kept " + userData + "L rainwater from entering the sewage system during rain, your neighbours kept " + avgData + "L.");
+        $(detailsElement).text("You kept " + userData + "L rainwater from entering the sewage system during rain, your neighbours kept " + avgData + "L. Thanks for helping with keeping Enschede dry!");
 
         new Chartist.Pie(element, {
             series: [userData, avgData]
