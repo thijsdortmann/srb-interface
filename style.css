@@ -3,15 +3,25 @@ body {
 }
 
 #srb__navbar_status {
-    color: #fff;
+    color: #000;
 }
 
-#srb__navbar_status #indicator {
-    margin-left: 10px;
-    width: 25px;
-    height: 25px;
+#srb__status-container {
+}
+
+#srb__status-container a {
+    color: #212529;
+}
+
+#srb__status-container a:hover {
+    text-decoration: none;
+}
+
+#status-indicator {
+    width: 15px;
+    height: 15px;
     border-radius: 50%;
-    border: #fff 2px solid;
+    border: #fff 1px solid;
     display: inline-block;
     box-shadow: inset 0 0 10px 0 rgba(255,255,255,0.8);
     text-align: center;
@@ -23,33 +33,66 @@ body {
     outline: none;
 }
 
-#srb__navbar_status #indicator:hover {
+#srb__status-container #notifications {
+
+}
+
+#srb__status-container #notifications li.list-group-item {
+    padding-left: 0px;
+}
+
+#srb__status-container #notifications .notifications-container {
+    border: 0;
+    border-left: 7px solid;
+    padding-left: 10px;
+}
+
+#srb__status-container #notifications .notifications-container.ok {
+    border-color: #00ff00;
+}
+
+#srb__status-container #notifications .notifications-container.warning {
+    border-color: #FF9600;
+}
+
+#srb__status-container #notifications .notifications-container.error {
+    border-color: #ff0000;
+}
+
+#status-indicator:hover {
     text-decoration: none;
     box-shadow: inset 0 0 10px 2px rgba(255,255,255,1);
 }
 
-#srb__navbar_status #indicator.ok {
+#status-indicator.ok {
     background-color: #00ff00;
 }
 
-#srb__navbar_status #indicator.warning {
-    background-color: #ffaa00;
+#status-indicator.warning {
+    background-color: #FF9600;
 }
 
-#srb__navbar_status #indicator.error {
+#status-indicator.error {
     background-color: #ff0000;
+}
+
+#status-text {
+    position: relative;
+    top: -3px;
+    display: inline-block;
 }
 
 #srb__mainContainer {
     margin-top: 20px;
 }
 
-#srb__status {
-    background-color: #bbd3f9;
-    height: 400px;
-    text-align: center;
+#srb__status .card-body {
+    padding: 10px;
 }
 
+#srb__status {
+    text-align: center;
+}
 
 #srb__status h1 {
     font-size: 32px;
@@ -84,16 +127,8 @@ body {
     width: 50%;
 }
 
-#srb__fillLevel {
-    height: 400px;
-}
-
 #srb__fillLevel .card-body {
     padding: 10px 0 0;
-}
-
-#srb__usage {
-    height: 400px;
 }
 
 #srb__competitive #competitiveChartContainer {
@@ -142,12 +177,12 @@ body {
 }
 
 .ct-area {
-    fill-opacity: 0.2;
+    fill-opacity: 0.5;
 }
 
 .past {
-    fill: #80c8e5;
-    stroke: #80c8e5;
+    fill: #3E4FBE;
+    stroke: #3E4FBE;
 }
 
 .past .ct-point {
@@ -155,8 +190,8 @@ body {
 }
 
 .future-accurate {
-    fill: #42f4b3;
-    stroke: #42f4b3;
+    fill: #359BD9;
+    stroke: #359BD9;
 }
 
 .future-accurate .ct-point {
@@ -164,11 +199,25 @@ body {
 }
 
 .future-estimated {
-    fill: #89f441;
-    stroke: #89f441;
+    fill: #0AE5F0;
+    stroke: #0AE5F0;
 }
 
 .future-estimated .ct-point {
+    stroke: none;
+}
+
+.rainfall .ct-area.ct-threshold-below {
+    fill: #BD07F4;
+    fill-opacity: 1;
+}
+
+.rainfall .ct-area.ct-threshold-above {
+    fill: #f05b4f;
+    fill-opacity: 1;
+}
+
+.rainfall .ct-point {
     stroke: none;
 }
 
@@ -241,18 +290,23 @@ body {
 }
 
 .ct-legend .past:before {
-    background-color: #80c8e5;
-    border-color: #80c8e5;
+    background-color: #3E4FBE;
+    border-color: #3E4FBE;
 }
 
 .ct-legend .future-accurate:before {
-    background-color: #42f4b3;
-    border-color: #42f4b3;
+    background-color: #359BD9;
+    border-color: #359BD9;
 }
 
 .ct-legend .future-estimated:before {
-    background-color: #89f441;
-    border-color: #89f441;
+    background-color: #0AE5F0;
+    border-color: #0AE5F0;
+}
+
+.ct-legend .rainfall:before {
+    background-color: #BD07F4;
+    border-color: #BD07F4;
 }
 
 .ct-legend .event:before {
@@ -313,4 +367,58 @@ body {
     left: -19px;
     right: 60px;
     border-top: #ff0000 5px dashed;
+}
+
+#competitiveChart .user {
+    fill: #009FFF;
+    stroke: #009FFF;
+}
+
+#competitiveChart .avg {
+    fill: #004F7F;
+    stroke: #004F7F;
+}
+
+@media (max-width: 768px) {
+    .ct-legend .event {
+        display: none;
+    }
+
+    #srb__fillLevel .event {
+        display: none;
+    }
+
+    #srb__status {
+        order: 0;
+    }
+
+    #srb__fillLevel {
+        order: 2;
+    }
+
+    #srb__status-container {
+        order: 1;
+    }
+
+    #srb__competitive {
+        order: 3;
+    }
+}
+
+@media (min-width: 768px) {
+    #srb__status {
+        height: 400px;
+    }
+
+    #srb__usage {
+        height: 400px;
+    }
+
+    #srb__fillLevel {
+        height: 500px;
+    }
+
+    #srb__status-container {
+        height: 400px;
+    }
 }

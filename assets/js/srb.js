@@ -5,7 +5,963 @@ var srb = {
     init: function () {
         this.setCurrentLevel(100, 200);
 
-        var demoData =[
+        var demoData = [
+            {
+                "ms": 1529503166000,
+                "value": 300
+            },
+            {
+                "ms": 1529503226000,
+                "value": 300
+            },
+            {
+                "ms": 1529503286000,
+                "value": 300
+            },
+            {
+                "ms": 1529503346000,
+                "value": 300
+            },
+            {
+                "ms": 1529503406000,
+                "value": 300
+            },
+            {
+                "ms": 1529503466000,
+                "value": 300
+            },
+            {
+                "ms": 1529503526000,
+                "value": 300
+            },
+            {
+                "ms": 1529503586000,
+                "value": 300
+            },
+            {
+                "ms": 1529503646000,
+                "value": 300
+            },
+            {
+                "ms": 1529503706000,
+                "value": 300
+            },
+            {
+                "ms": 1529503766000,
+                "value": 300
+            },
+            {
+                "ms": 1529503826000,
+                "value": 300
+            },
+            {
+                "ms": 1529503886000,
+                "value": 300
+            },
+            {
+                "ms": 1529503946000,
+                "value": 300
+            },
+            {
+                "ms": 1529504006000,
+                "value": 300
+            },
+            {
+                "ms": 1529504066000,
+                "value": 300
+            },
+            {
+                "ms": 1529504126000,
+                "value": 300
+            },
+            {
+                "ms": 1529504186000,
+                "value": 300
+            },
+            {
+                "ms": 1529504246000,
+                "value": 300
+            },
+            {
+                "ms": 1529504306000,
+                "value": 300
+            },
+            {
+                "ms": 1529504366000,
+                "value": 300
+            },
+            {
+                "ms": 1529504426000,
+                "value": 300
+            },
+            {
+                "ms": 1529504486000,
+                "value": 300
+            },
+            {
+                "ms": 1529504546000,
+                "value": 300
+            },
+            {
+                "ms": 1529504606000,
+                "value": 300
+            },
+            {
+                "ms": 1529504666000,
+                "value": 296
+            },
+            {
+                "ms": 1529504726000,
+                "value": 292
+            },
+            {
+                "ms": 1529504786000,
+                "value": 288
+            },
+            {
+                "ms": 1529504846000,
+                "value": 284
+            },
+            {
+                "ms": 1529504906000,
+                "value": 280
+            },
+            {
+                "ms": 1529504966000,
+                "value": 280
+            },
+            {
+                "ms": 1529505026000,
+                "value": 280
+            },
+            {
+                "ms": 1529505086000,
+                "value": 280
+            },
+            {
+                "ms": 1529505146000,
+                "value": 280
+            },
+            {
+                "ms": 1529505206000,
+                "value": 280
+            },
+            {
+                "ms": 1529505266000,
+                "value": 280
+            },
+            {
+                "ms": 1529505326000,
+                "value": 280
+            },
+            {
+                "ms": 1529505386000,
+                "value": 280
+            },
+            {
+                "ms": 1529505446000,
+                "value": 280
+            },
+            {
+                "ms": 1529505506000,
+                "value": 280
+            },
+            {
+                "ms": 1529505566000,
+                "value": 280
+            },
+            {
+                "ms": 1529505626000,
+                "value": 280
+            },
+            {
+                "ms": 1529505686000,
+                "value": 280
+            },
+            {
+                "ms": 1529505746000,
+                "value": 280
+            },
+            {
+                "ms": 1529505806000,
+                "value": 280
+            },
+            {
+                "ms": 1529505866000,
+                "value": 280
+            },
+            {
+                "ms": 1529505926000,
+                "value": 280
+            },
+            {
+                "ms": 1529505986000,
+                "value": 280
+            },
+            {
+                "ms": 1529506046000,
+                "value": 280
+            },
+            {
+                "ms": 1529506106000,
+                "value": 280
+            },
+            {
+                "ms": 1529506166000,
+                "value": 280
+            },
+            {
+                "ms": 1529506226000,
+                "value": 280
+            },
+            {
+                "ms": 1529506286000,
+                "value": 280
+            },
+            {
+                "ms": 1529506346000,
+                "value": 280
+            },
+            {
+                "ms": 1529506406000,
+                "value": 280
+            },
+            {
+                "ms": 1529506466000,
+                "value": 280
+            },
+            {
+                "ms": 1529506526000,
+                "value": 280
+            },
+            {
+                "ms": 1529506586000,
+                "value": 280
+            },
+            {
+                "ms": 1529506646000,
+                "value": 275
+            },
+            {
+                "ms": 1529506706000,
+                "value": 270
+            },
+            {
+                "ms": 1529506766000,
+                "value": 270
+            },
+            {
+                "ms": 1529506826000,
+                "value": 270
+            },
+            {
+                "ms": 1529506886000,
+                "value": 270
+            },
+            {
+                "ms": 1529506946000,
+                "value": 270
+            },
+            {
+                "ms": 1529507006000,
+                "value": 270
+            },
+            {
+                "ms": 1529507066000,
+                "value": 270
+            },
+            {
+                "ms": 1529507126000,
+                "value": 270
+            },
+            {
+                "ms": 1529507186000,
+                "value": 270
+            },
+            {
+                "ms": 1529507246000,
+                "value": 270
+            },
+            {
+                "ms": 1529507306000,
+                "value": 270
+            },
+            {
+                "ms": 1529507366000,
+                "value": 270
+            },
+            {
+                "ms": 1529507426000,
+                "value": 270
+            },
+            {
+                "ms": 1529507486000,
+                "value": 270
+            },
+            {
+                "ms": 1529507546000,
+                "value": 270
+            },
+            {
+                "ms": 1529507606000,
+                "value": 270
+            },
+            {
+                "ms": 1529507666000,
+                "value": 270
+            },
+            {
+                "ms": 1529507726000,
+                "value": 270
+            },
+            {
+                "ms": 1529507786000,
+                "value": 270
+            },
+            {
+                "ms": 1529507846000,
+                "value": 270
+            },
+            {
+                "ms": 1529507906000,
+                "value": 270
+            },
+            {
+                "ms": 1529507966000,
+                "value": 270
+            },
+            {
+                "ms": 1529508026000,
+                "value": 270
+            },
+            {
+                "ms": 1529508086000,
+                "value": 270
+            },
+            {
+                "ms": 1529508146000,
+                "value": 270
+            },
+            {
+                "ms": 1529508206000,
+                "value": 270
+            },
+            {
+                "ms": 1529508266000,
+                "value": 270
+            },
+            {
+                "ms": 1529508326000,
+                "value": 270
+            },
+            {
+                "ms": 1529508386000,
+                "value": 270
+            },
+            {
+                "ms": 1529508446000,
+                "value": 270
+            },
+            {
+                "ms": 1529508506000,
+                "value": 270
+            },
+            {
+                "ms": 1529508566000,
+                "value": 270
+            },
+            {
+                "ms": 1529508626000,
+                "value": 270
+            },
+            {
+                "ms": 1529508686000,
+                "value": 270
+            },
+            {
+                "ms": 1529508746000,
+                "value": 270
+            },
+            {
+                "ms": 1529508806000,
+                "value": 270
+            },
+            {
+                "ms": 1529508866000,
+                "value": 270
+            },
+            {
+                "ms": 1529508926000,
+                "value": 270
+            },
+            {
+                "ms": 1529508986000,
+                "value": 270
+            },
+            {
+                "ms": 1529509046000,
+                "value": 270
+            },
+            {
+                "ms": 1529509106000,
+                "value": 270
+            },
+            {
+                "ms": 1529509166000,
+                "value": 270
+            },
+            {
+                "ms": 1529509226000,
+                "value": 270
+            },
+            {
+                "ms": 1529509286000,
+                "value": 270
+            },
+            {
+                "ms": 1529509346000,
+                "value": 270
+            },
+            {
+                "ms": 1529509406000,
+                "value": 270
+            },
+            {
+                "ms": 1529509466000,
+                "value": 270
+            },
+            {
+                "ms": 1529509526000,
+                "value": 270
+            },
+            {
+                "ms": 1529509586000,
+                "value": 270
+            },
+            {
+                "ms": 1529509646000,
+                "value": 270
+            },
+            {
+                "ms": 1529509706000,
+                "value": 270
+            },
+            {
+                "ms": 1529509766000,
+                "value": 270
+            },
+            {
+                "ms": 1529509826000,
+                "value": 270
+            },
+            {
+                "ms": 1529509886000,
+                "value": 270
+            },
+            {
+                "ms": 1529509946000,
+                "value": 270
+            },
+            {
+                "ms": 1529510006000,
+                "value": 270
+            },
+            {
+                "ms": 1529510066000,
+                "value": 270
+            },
+            {
+                "ms": 1529510126000,
+                "value": 270
+            },
+            {
+                "ms": 1529510186000,
+                "value": 270
+            },
+            {
+                "ms": 1529510246000,
+                "value": 270
+            },
+            {
+                "ms": 1529510306000,
+                "value": 270
+            },
+            {
+                "ms": 1529510366000,
+                "value": 270
+            },
+            {
+                "ms": 1529510426000,
+                "value": 270
+            },
+            {
+                "ms": 1529510486000,
+                "value": 270
+            },
+            {
+                "ms": 1529510546000,
+                "value": 270
+            },
+            {
+                "ms": 1529510606000,
+                "value": 270
+            },
+            {
+                "ms": 1529510666000,
+                "value": 270
+            },
+            {
+                "ms": 1529510726000,
+                "value": 270
+            },
+            {
+                "ms": 1529510786000,
+                "value": 270
+            },
+            {
+                "ms": 1529510846000,
+                "value": 270
+            },
+            {
+                "ms": 1529510906000,
+                "value": 270
+            },
+            {
+                "ms": 1529510966000,
+                "value": 270
+            },
+            {
+                "ms": 1529511026000,
+                "value": 270
+            },
+            {
+                "ms": 1529511086000,
+                "value": 270
+            },
+            {
+                "ms": 1529511146000,
+                "value": 270
+            },
+            {
+                "ms": 1529511206000,
+                "value": 270
+            },
+            {
+                "ms": 1529511266000,
+                "value": 270
+            },
+            {
+                "ms": 1529511326000,
+                "value": 270
+            },
+            {
+                "ms": 1529511386000,
+                "value": 270
+            },
+            {
+                "ms": 1529511446000,
+                "value": 270
+            },
+            {
+                "ms": 1529511506000,
+                "value": 270
+            },
+            {
+                "ms": 1529511566000,
+                "value": 270
+            },
+            {
+                "ms": 1529511626000,
+                "value": 270
+            },
+            {
+                "ms": 1529511686000,
+                "value": 270
+            },
+            {
+                "ms": 1529511746000,
+                "value": 270
+            },
+            {
+                "ms": 1529511806000,
+                "value": 270
+            },
+            {
+                "ms": 1529511866000,
+                "value": 270
+            },
+            {
+                "ms": 1529511926000,
+                "value": 270
+            },
+            {
+                "ms": 1529511986000,
+                "value": 270
+            },
+            {
+                "ms": 1529512046000,
+                "value": 270
+            },
+            {
+                "ms": 1529512106000,
+                "value": 270
+            },
+            {
+                "ms": 1529512166000,
+                "value": 270
+            },
+            {
+                "ms": 1529512226000,
+                "value": 270
+            },
+            {
+                "ms": 1529512286000,
+                "value": 270
+            },
+            {
+                "ms": 1529512346000,
+                "value": 270
+            },
+            {
+                "ms": 1529512406000,
+                "value": 270
+            },
+            {
+                "ms": 1529512466000,
+                "value": 270
+            },
+            {
+                "ms": 1529512526000,
+                "value": 270
+            },
+            {
+                "ms": 1529512586000,
+                "value": 270
+            },
+            {
+                "ms": 1529512646000,
+                "value": 270
+            },
+            {
+                "ms": 1529512706000,
+                "value": 270
+            },
+            {
+                "ms": 1529512766000,
+                "value": 270
+            },
+            {
+                "ms": 1529512826000,
+                "value": 270
+            },
+            {
+                "ms": 1529512886000,
+                "value": 270
+            },
+            {
+                "ms": 1529512946000,
+                "value": 270
+            },
+            {
+                "ms": 1529513006000,
+                "value": 270
+            },
+            {
+                "ms": 1529513066000,
+                "value": 270
+            },
+            {
+                "ms": 1529513126000,
+                "value": 270
+            },
+            {
+                "ms": 1529513186000,
+                "value": 270
+            },
+            {
+                "ms": 1529513246000,
+                "value": 270
+            },
+            {
+                "ms": 1529513306000,
+                "value": 270
+            },
+            {
+                "ms": 1529513366000,
+                "value": 270
+            },
+            {
+                "ms": 1529513426000,
+                "value": 270
+            },
+            {
+                "ms": 1529513486000,
+                "value": 270
+            },
+            {
+                "ms": 1529513546000,
+                "value": 270
+            },
+            {
+                "ms": 1529513606000,
+                "value": 270
+            },
+            {
+                "ms": 1529513666000,
+                "value": 270
+            },
+            {
+                "ms": 1529513726000,
+                "value": 270
+            },
+            {
+                "ms": 1529513786000,
+                "value": 270
+            },
+            {
+                "ms": 1529513846000,
+                "value": 270
+            },
+            {
+                "ms": 1529513906000,
+                "value": 270
+            },
+            {
+                "ms": 1529513966000,
+                "value": 280
+            },
+            {
+                "ms": 1529514026000,
+                "value": 290
+            },
+            {
+                "ms": 1529514086000,
+                "value": 300
+            },
+            {
+                "ms": 1529514146000,
+                "value": 300
+            },
+            {
+                "ms": 1529514206000,
+                "value": 300
+            },
+            {
+                "ms": 1529514266000,
+                "value": 300
+            },
+            {
+                "ms": 1529514326000,
+                "value": 300
+            },
+            {
+                "ms": 1529514386000,
+                "value": 300
+            },
+            {
+                "ms": 1529514446000,
+                "value": 300
+            },
+            {
+                "ms": 1529514506000,
+                "value": 300
+            },
+            {
+                "ms": 1529514566000,
+                "value": 300
+            },
+            {
+                "ms": 1529514626000,
+                "value": 300
+            },
+            {
+                "ms": 1529514686000,
+                "value": 300
+            },
+            {
+                "ms": 1529514746000,
+                "value": 300
+            },
+            {
+                "ms": 1529514806000,
+                "value": 300
+            },
+            {
+                "ms": 1529514866000,
+                "value": 300
+            },
+            {
+                "ms": 1529514926000,
+                "value": 300
+            },
+            {
+                "ms": 1529514986000,
+                "value": 300
+            },
+            {
+                "ms": 1529515046000,
+                "value": 300
+            },
+            {
+                "ms": 1529515106000,
+                "value": 300
+            },
+            {
+                "ms": 1529515166000,
+                "value": 300
+            },
+            {
+                "ms": 1529515226000,
+                "value": 300
+            },
+            {
+                "ms": 1529515286000,
+                "value": 300
+            },
+            {
+                "ms": 1529515346000,
+                "value": 300
+            },
+            {
+                "ms": 1529515406000,
+                "value": 300
+            },
+            {
+                "ms": 1529515466000,
+                "value": 300
+            },
+            {
+                "ms": 1529515526000,
+                "value": 300
+            },
+            {
+                "ms": 1529515586000,
+                "value": 300
+            },
+            {
+                "ms": 1529515646000,
+                "value": 300
+            },
+            {
+                "ms": 1529515706000,
+                "value": 300
+            },
+            {
+                "ms": 1529515766000,
+                "value": 300
+            },
+            {
+                "ms": 1529515826000,
+                "value": 300
+            },
+            {
+                "ms": 1529515886000,
+                "value": 300
+            },
+            {
+                "ms": 1529515946000,
+                "value": 300
+            },
+            {
+                "ms": 1529516006000,
+                "value": 300
+            },
+            {
+                "ms": 1529516066000,
+                "value": 300
+            },
+            {
+                "ms": 1529516126000,
+                "value": 300
+            },
+            {
+                "ms": 1529516186000,
+                "value": 300
+            },
+            {
+                "ms": 1529516246000,
+                "value": 300
+            },
+            {
+                "ms": 1529516306000,
+                "value": 300
+            },
+            {
+                "ms": 1529516366000,
+                "value": 300
+            },
+            {
+                "ms": 1529516426000,
+                "value": 300
+            },
+            {
+                "ms": 1529516486000,
+                "value": 300
+            },
+            {
+                "ms": 1529516546000,
+                "value": 300
+            },
+            {
+                "ms": 1529516606000,
+                "value": 300
+            },
+            {
+                "ms": 1529516666000,
+                "value": 300
+            },
+            {
+                "ms": 1529516726000,
+                "value": 300
+            },
+            {
+                "ms": 1529516786000,
+                "value": 300
+            },
+            {
+                "ms": 1529516846000,
+                "value": 300
+            },
+            {
+                "ms": 1529516906000,
+                "value": 300
+            },
+            {
+                "ms": 1529516966000,
+                "value": 300
+            },
+            {
+                "ms": 1529517026000,
+                "value": 300
+            },
+            {
+                "ms": 1529517086000,
+                "value": 300
+            },
+            {
+                "ms": 1529517146000,
+                "value": 300
+            },
+            {
+                "ms": 1529517206000,
+                "value": 300
+            },
+            {
+                "ms": 1529517266000,
+                "value": 300
+            },
+            {
+                "ms": 1529517326000,
+                "value": 300
+            },
+            {
+                "ms": 1529517386000,
+                "value": 300
+            },
+            {
+                "ms": 1529517446000,
+                "value": 300
+            },
             {
                 "ms": 1529517506000,
                 "value": 300
@@ -489,22 +1445,43 @@ var srb = {
         ];
 
         var demoDischarges = [
+            {"ms": 1529504906000, "dischargeType": "faucet", "amount": 20},
+            {"ms": 1529506586000, "dischargeType": "rain", "amount": 30},
             {"ms": 1529522186000, "dischargeType": "rain", "amount": 40},
             {"ms": 1529525966000, "dischargeType": "rain", "amount": 60},
-            {"ms": 1529536886000, "dischargeType": "rain", "amount": 100}
+            {"ms": 1529536886000, "dischargeType": "rain", "amount": 450}
         ];
 
 
-        var demoUserBuffered = 6400;
+        var demoUserBuffered = 64000;
 
-        var demoAvgBuffered = 4600;
+        var demoAvgBuffered = 460000;
 
         var demoBufferInfo = {
             "address": "Drienerlolaan 5",
             "waterTemp": 22,
             "capacity": 300,
-            "level": 240
+            "level": 260
         };
+
+        var demoNotifications = [
+            {
+                "severity": 1,
+                "title": "Risk of legionella!",
+                "content": "Due to the temperature in your buffer, there is a risk of legionella developing. Please be careful when using the water for garden use."
+            },
+            {
+                "severity": 2,
+                "title": "Filter needs to be replaced",
+                "content": "The inlet filter in your buffer has exceeded it's useful life. Please view the instructions in the instruction manual to learn how to replace the filter."
+            }
+        ];
+
+        if ($(window).width() < 480) {
+            $("#notificationCollapsible").addClass("collapse");
+        }
+
+        var interfaceStartTime = 1529524646000;
 
         this.bufferCapacity = demoBufferInfo.capacity;
 
@@ -514,81 +1491,87 @@ var srb = {
 
         this.createCompetitiveGraphic(demoUserBuffered, demoAvgBuffered, '#competitiveChart', '#srb__competitive #compliment', '#srb__competitive #details');
 
-        this.createFillLevelGraphic(parsedDischarges.fillLevel, parsedDischarges.eventsList, '#chart1', 1529524646000, 3000000);
-        this.createRainfallGraph(parsedDischarges.showers, '#rainfallChart', 1529524646000, 3000000);
+        this.createFillLevelGraphic(parsedDischarges.fillLevel, parsedDischarges.eventsList, parsedDischarges.showers, '#chart1', 1529524646000, 7200000);
+        //this.createRainfallGraph(parsedDischarges.showers, '#rainfallChart', 1529524646000, 3000000);
 
         this.createTimeline(parsedDischarges.timeline, '#timeline', 1529524646000);
 
         this.setBufferInfo(demoBufferInfo, "srb__status");
-        this.setStatus('warning', [
-            {
-                "title": "Risk of legionella!",
-                "content": "Due to the temperature in your buffer, there is a risk of legionella developing. Please be careful when using the water for garden use."
-            }
-        ]);
+        this.setStatus(demoNotifications);
     },
 
     valueAtMs: function (ms, array) {
-    for(var i = 0; i < array.length; i++) {
-        if (i === array.length - 1) {
-            return array[i].value;
-        }
-
-        if (ms > array[i].ms && ms < array[i + 1].ms) {
-            return array[i].value;
-        }
-    }
-},
-
-    setBufferInfo: function(infoData, element) {
-        console.log(infoData);
-        srb.setCurrentLevel(infoData.level, infoData.capacity);
-        $("#address").text(infoData.address);
-        $("#wTemperature").html(infoData.waterTemp + " &#8451;");
-        $("#wHealth").html((infoData.waterTemp > 20) ? "Risk of legionella" : "Good");
-    },
-
-    setCurrentLevel: function (current, total) {
-        var graphic_fillLevel_height = 435;
-
-        d3.select('#srb__status_graphic_fillLevel').transition().duration(500).attr('height', (graphic_fillLevel_height * (current / total)) + 'px');
-        d3.select('#srb__status_graphic_fillPercentage').text(Math.ceil((current / total) * 100) + ' %');
-        d3.select('#srb__status_graphic_fillLiters').text('(' + Math.ceil(current) + ' L)');
-    },
-
-    setStatus: function(status, notifications) {
-        var statusIndicator = $("#srb__navbar_status").find("#indicator");
-
-        statusIndicator.removeClass();
-        statusIndicator.addClass(status);
-
-        if(notifications.length > 0) {
-            statusIndicator.popover('dispose');
-
-            statusIndicator.text(notifications.length);
-
-            var popoverContent = "";
-
-            for(var i = 0; i < notifications.length; i++) {
-                popoverContent += "<strong>" + notifications[i].title + "</strong><br>" + notifications[i].content + "<br>";
+        for (var i = 0; i < array.length; i++) {
+            if (i === array.length - 1) {
+                return array[i].value;
             }
 
-            statusIndicator.popover({
-                selector: false,
-                container: 'body',
-                html: true,
-                trigger: 'focus',
-                content: popoverContent,
-                placement: 'bottom'
-            });
-        } else {
-            statusIndicator.text("");
-
-            statusIndicator.popover('dispose');
+            if (ms > array[i].ms && ms < array[i + 1].ms) {
+                return array[i].value;
+            }
         }
     },
 
-    parseDischarges: function(discharges, fillLevel, now, futureParseLimit) {
+    setBufferInfo: function (infoData, element) {
+        console.log(infoData);
+        $("#address").text(infoData.address);
+        $("#wTemperature").html(infoData.waterTemp + " &#8451;");
+
+        var waterHealthy = true;
+
+        if (infoData.waterTemp > 20) waterHealthy = false;
+
+        $("#wHealth").html(waterHealthy ? "Good" : "Risk of legionella <i class=\"fas fa-info-circle\" id='waterhealthTooltip'></i>");
+        $('#waterhealthTooltip').tooltip({
+            'title': "The temperature in your buffer is currently above 20 degrees. At this temperature, legionella is likely to develop. Please be careful when using the water yourself!"
+        });
+
+        srb.setCurrentLevel(infoData.level, infoData.capacity, waterHealthy);
+    },
+
+    setCurrentLevel: function (current, total, health) {
+        var graphic_fillLevel_height = 435;
+
+        d3.select('#srb__status_graphic_fillLevel').transition().duration(500).attr('height', (graphic_fillLevel_height * (current / total)) + 'px').style("fill", (health ? '#39c' : '#FF9600'));
+        d3.select('#srb__status_graphic_fillPercentage').text(Math.ceil((current / total) * 100) + ' %');
+        d3.select('#srb__status_graphic_fillLiters').text('(' + Math.ceil(current) + ' / ' + Math.ceil(total) + ' L)');
+    },
+
+    setStatus: function (notifications) {
+        var statusIndicator = $("#status-indicator");
+        var notificationsElement = $("#notifications");
+
+        var statusTextArray = ['ok', 'warning', 'error'];
+
+        var status = 0;
+
+        var notificationsContent = "";
+
+        if (notifications.length > 0) {
+            notificationsContent += '<ul class="list-group">';
+
+            for(var i = 0; i < notifications.length; i++) {
+                if (notifications[i].severity > status) status = notifications[i].severity;
+
+                notificationsContent += "<li class='list-group-item'><div class='notifications-container " + statusTextArray[notifications[i].severity] + "'><strong>" + notifications[i].title + "</strong><br>" + notifications[i].content + "</div></li>";
+            }
+
+            notificationsContent += '</ul>';
+        } else {
+            notificationsContent = "<center>There are currently no notifications.<br>Everything's good <i class=\"far fa-smile-beam\"></i></center>";
+        }
+
+        var statusText = statusTextArray[status];
+
+        $("#status-text").text(statusText.charAt(0).toUpperCase() + statusText.slice(1));
+
+        statusIndicator.removeClass();
+        statusIndicator.addClass(statusText);
+
+        notificationsElement.html(notificationsContent);
+    },
+
+    parseDischarges: function (discharges, fillLevel, now, futureParseLimit) {
         var eventsList = [];
         var timeline = [];
         var showers = [];
@@ -597,213 +1580,165 @@ var srb = {
 
         showers.push({"ms": fillLevel[0].ms, "value": 0});
 
-        for(var i = 0; i < discharges.length; i++) {
+        for (var i = 0; i < discharges.length; i++) {
             var d = discharges[i];
 
             fillDelta.push({
-                "ms" : now + 1,
-                "delta" : 0
+                "ms": now + 1,
+                "delta": 0
             });
 
-            if(d.dischargeType === "rain") {
+            if (d.dischargeType === "rain") {
                 var rainTime = d.ms + this.defaultDischargeTime;
 
                 eventsList.push({
-                    "ms" : d.ms,
-                    "event" : "Buffer discharged to make room for rainfall starting at " + moment(rainTime).format("H:mm") + " with an expected amount of " + d.amount + " liters."
+                    "ms": d.ms,
+                    "event": "Buffer discharged to make room for rainfall starting at " + moment(rainTime).format("H:mm") + " with an expected amount of " + d.amount + " liters." + ((d.amount > srb.bufferCapacity) ? " This will exceed the buffer capacity by " + (d.amount - srb.bufferCapacity) + " liters." : "")
                 });
 
                 eventsList.push({
-                    "ms" : rainTime,
-                    "event" : "Rainfall started. The buffer emptied " + d.amount + " liters at " + moment(d.ms).format("H:mm") + " in preparation for this rainfall."
+                    "ms": rainTime,
+                    "event": "Rainfall started. The buffer made capacity available for  " + d.amount + " liters at " + moment(d.ms).format("H:mm") + " in preparation for this rainfall." + ((d.amount > srb.bufferCapacity) ? " This exceeds the buffer capacity, causing " + (d.amount - srb.bufferCapacity) + " liters to overflow." : "")
                 });
 
-                if(d.ms > now) {
+                if (d.ms > now) {
                     fillDelta.push({
-                        "ms" : d.ms,
-                        "delta" : 0
+                        "ms": d.ms,
+                        "delta": 0
                     });
 
                     fillDelta.push({
-                        "ms" : d.ms + 300000,
-                        "delta" : -d.amount
+                        "ms": d.ms + 300000,
+                        "delta": -d.amount
                     });
                 }
 
-                if(rainTime > now) {
+                if (rainTime > now) {
                     fillDelta.push({
-                        "ms" : rainTime,
-                        "delta" : 0
+                        "ms": rainTime,
+                        "delta": 0
                     });
 
                     fillDelta.push({
-                        "ms" : rainTime + 300000,
-                        "delta" : d.amount
-                    });
-
-                    showers.push({
-                        "ms" : rainTime - 1,
-                        "value" : 0
-                    });
-
-                    showers.push({
-                        "ms" : rainTime,
-                        "value" : d.amount
-                    });
-
-                    showers.push({
-                        "ms" : rainTime + 300000,
-                        "value" : 0
+                        "ms": rainTime + 300000,
+                        "delta": d.amount
                     });
                 }
+
+                showers.push({
+                    "ms": rainTime - 300000,
+                    "value": 0
+                });
+
+                showers.push({
+                    "ms": rainTime - 150000,
+                    "value": d.amount
+                });
+
+                showers.push({
+                    "ms": rainTime + 150000,
+                    "value": d.amount
+                });
+
+                showers.push({
+                    "ms": rainTime + 300000,
+                    "value": 0
+                });
             }
 
-            if(d.dischargeType === "faucet") {
+            if (d.dischargeType === "faucet") {
                 eventsList.push({
-                    "ms" : d.ms,
-                    "event" : "The faucet on your buffer was used to empty " + d.amount + " liters."
+                    "ms": d.ms,
+                    "event": "The faucet on your buffer was used to empty " + d.amount + " liters."
                 });
             }
         }
 
         fillDelta.push({
-            "ms" : now + futureParseLimit,
-            "delta" : 0
+            "ms": now + futureParseLimit,
+            "delta": 0
         });
 
 
         // Sort fillDelta
-        fillDelta = fillDelta.sort(function(a, b) {
+        fillDelta = fillDelta.sort(function (a, b) {
             return a.ms - b.ms;
         });
 
         // Add fillDelta to fillLevel
-        for(var i = 0; i < fillDelta.length; i++) {
+        for (var i = 0; i < fillDelta.length; i++) {
+            var newFillLevel = fillLevel[fillLevel.length - 1].value + fillDelta[i].delta;
+
+            if(newFillLevel > srb.bufferCapacity) newFillLevel = srb.bufferCapacity;
+            if(newFillLevel < 0) newFillLevel = 0;
+
             fillLevel.push({
-                "ms" : fillDelta[i].ms,
-                "value" : fillLevel[fillLevel.length - 1].value + fillDelta[i].delta
+                "ms": fillDelta[i].ms,
+                "value": newFillLevel
             });
         }
 
         // Sort fillLevel
-        fillLevel = fillLevel.sort(function(a, b) {
+        fillLevel = fillLevel.sort(function (a, b) {
             return a.ms - b.ms;
         });
 
-        for(var i = 0; i < eventsList.length; i++) {
+        for (var i = 0; i < eventsList.length; i++) {
             timeline.push({
-                "ms" : eventsList[i].ms - 1,
-                "type" : "fillLevel",
-                "value" : srb.valueAtMs(eventsList[i].ms - 1, fillLevel)
+                "ms": eventsList[i].ms - 1,
+                "type": "fillLevel",
+                "value": srb.valueAtMs(eventsList[i].ms - 1, fillLevel)
             });
 
             timeline.push({
-                "ms" : eventsList[i].ms,
-                "type" : "event",
-                "value" : eventsList[i].event
+                "ms": eventsList[i].ms,
+                "type": "event",
+                "value": eventsList[i].event
             });
         }
 
         timeline.push({
-            "ms" : fillLevel[fillLevel.length - 1].ms,
-            "type" : "fillLevel",
-            "value" : fillLevel[fillLevel.length - 1].value
+            "ms": fillLevel[fillLevel.length - 1].ms,
+            "type": "fillLevel",
+            "value": fillLevel[fillLevel.length - 1].value
         });
 
-        timeline = timeline.sort(function(a, b) {
+        timeline = timeline.sort(function (a, b) {
             return a.ms - b.ms;
         });
 
         showers.push({
-            "ms" : now + futureParseLimit,
-            "value" : 0
+            "ms": now + futureParseLimit,
+            "value": 0
         });
 
         return {
-            "fillLevel" : fillLevel,
-            "eventsList" : eventsList,
-            "timeline" : timeline,
-            "showers" : showers
+            "fillLevel": fillLevel,
+            "eventsList": eventsList,
+            "timeline": timeline,
+            "showers": showers
         };
     },
 
-    createComparisonGraphic: function (userData, avgData, element) {
-        var labels = [];
-
-        var userSewage = [];
-        var userOwn = [];
-
-        var avgSewage = [];
-        var avgOwn = [];
-
-        for (var i = 0; i < userData.length; i++) {
-            labels.push(moment().year(userData[i].year).month(userData[i].month).format("MMM YYYY"));
-
-            userSewage.push(userData[i].sewage);
-            userOwn.push(userData[i].own);
-        }
-
-        for (var j = 0; j < avgData.length; j++) {
-            avgSewage.push(avgData[j].sewage);
-            avgOwn.push(avgData[j].own);
-        }
-
-        var data = {
-            labels: labels,
-
-            series: [
-                userSewage,
-                userOwn,
-                avgSewage,
-                avgOwn
-            ]
-        };
-
-        var options = {
-            seriesBarDistance: 10,
-            plugins: [
-                Chartist.plugins.legend({
-                    clickable: false,
-                    classNames: ['past', 'future-accurate', 'future-estimated', 'event'],
-                    legendNames: ['Past', 'Prediction', 'Estimation', 'Event']
-                })
-            ],
-            height: "290px"
-        };
-
-        var responsiveOptions = [
-            ['screen and (max-width: 640px)', {
-                seriesBarDistance: 5,
-                axisX: {
-                    labelInterpolationFnc: function (value) {
-                        return value[0];
-                    }
-                }
-            }]
-        ];
-
-        console.log(data);
-
-        new Chartist.Bar(element, data, options, responsiveOptions);
-    },
-
-    createCompetitiveGraphic: function(userData, avgData, element, complimentElement, detailsElement) {
-        var userWin = userData > avgData;
-
-        if(userWin) $(complimentElement).text("Great job!");
-        else $(complimentElement).text("There is room for improvement");
-
-        $(detailsElement).text("You kept " + userData + "L rainwater from entering the sewage system during rain, your neighbours kept " + avgData + "L. Thanks for helping with keeping Enschede dry!");
+    createCompetitiveGraphic: function (userData, avgData, element, complimentElement, detailsElement) {
+        $(complimentElement).text("Great job!");
+        $(detailsElement).text("Together, we kept " + avgData + " L out of the sewers during rain. Your neighbourhood was responsible for " + Math.round((userData / avgData) * 100) + " % of this.");
 
         new Chartist.Pie(element, {
-            series: [userData, avgData]
+            series: [{
+                data: userData,
+                className: 'user'
+            }, {
+                data: avgData,
+                className: 'avg'
+            }]
         }, {
             donut: true,
             donutWidth: 50,
             startAngle: 270,
             total: (userData + avgData) * 2,
-            showLabel: true
-        }).on('draw', function() {
+            showLabel: false
+        }).on('draw', function () {
             var chartEl = $(element + ' .ct-chart-donut');
             chartEl.removeAttr('style');
             chartEl.height(chartEl.height() / 2);
@@ -812,18 +1747,20 @@ var srb = {
 
     },
 
-    createFillLevelGraphic: function (data, events, element, currentDt, accurateMs) {
+    createFillLevelGraphic: function (data, events, showers, element, currentDt, accurateMs) {
         var allGraphData = [];
         var pastGraphData = [];
         var futureAccGraphData = [];
         var futureEstGraphData = [];
 
+        var showerGraphData = [];
+
         var eventsGraphData = [];
 
-        data.push({ "ms": currentDt + accurateMs - 1, "value": srb.valueAtMs(currentDt + accurateMs - 1, data)});
+        data.push({"ms": currentDt + accurateMs - 1, "value": srb.valueAtMs(currentDt + accurateMs - 1, data)});
 
         // Sort fillLevel
-        data = data.sort(function(a, b) {
+        data = data.sort(function (a, b) {
             return a.ms - b.ms;
         });
 
@@ -845,7 +1782,37 @@ var srb = {
             }
         }
 
-        if(events) {
+        // Rainfall processing
+
+        showers.push({"ms": currentDt - 1, "value": srb.valueAtMs(currentDt - 1, showers)});
+        showers.push({"ms": currentDt, "value": srb.valueAtMs(currentDt, showers)});
+        showers.push({
+            "ms": currentDt + accurateMs - 1,
+            "value": srb.valueAtMs(currentDt + accurateMs - 1, showers)
+        });
+        showers.push({
+            "ms": currentDt + accurateMs,
+            "value": srb.valueAtMs(currentDt + accurateMs - 1, showers)
+        });
+
+        // Sort fillLevel
+        showers = showers.sort(function (a, b) {
+            return a.ms - b.ms;
+        });
+
+        var maxShower = 0;
+
+        for (var i = 0; i < showers.length; i++) {
+            var d = showers[i];
+            var formattedData = {x: new Date(d.ms), y: d.value};
+
+            showerGraphData.push(formattedData);
+            if(d.value > maxShower) maxShower = d.value;
+        }
+
+        // End rainfall processing
+
+        if (events) {
             for (var i = 0; i < events.length; i++) {
                 var e = events[i];
 
@@ -885,6 +1852,11 @@ var srb = {
                     name: '10-hour prediction'
                 },
                 {
+                    data: showerGraphData,
+                    className: 'rainfall',
+                    name: 'Rainfall'
+                },
+                {
                     data: eventsGraphData,
                     className: 'event',
                     name: 'Event'
@@ -900,9 +1872,9 @@ var srb = {
         }, {
             showArea: true,
             low: 0,
-            high: srb.bufferCapacity,
+            high: (srb.bufferCapacity < maxShower) ? maxShower : srb.bufferCapacity,
             fullWidth: true,
-            height: '300px',
+            height: '400px',
             axisX: {
                 type: Chartist.FixedScaleAxis,
                 divisor: 6,
@@ -913,15 +1885,18 @@ var srb = {
             axisY: {
                 labelInterpolationFnc: function (value) {
                     console.log(srb.bufferCapacity);
-                    return  Math.round(((value / srb.bufferCapacity) * 100)) + '%';
+                    return Math.round(((value / srb.bufferCapacity) * 100)) + '%';
                 },
                 divisor: 5
             },
             plugins: [
                 Chartist.plugins.legend({
                     clickable: false,
-                    classNames: ['past', 'future-accurate', 'future-estimated', 'event'],
-                    legendNames: ['Past', '2-hour prediction', '10-hour prediction', 'Event']
+                    classNames: ['past', 'future-accurate', 'future-estimated', 'rainfall', 'event'],
+                    legendNames: ['Past', '2-hour prediction', '10-hour prediction', 'Rainfall', 'Event']
+                }),
+                Chartist.plugins.ctThreshold({
+                    threshold: srb.bufferCapacity + 1
                 })
             ]
         }).on("draw", function (data) {
@@ -945,14 +1920,20 @@ var srb = {
         });
     },
 
-    createRainfallGraph: function(rainfallData, element, currentDt, accurateMs) {
-        rainfallData.push({ "ms": currentDt - 1, "value": srb.valueAtMs(currentDt - 1, rainfallData)});
-        rainfallData.push({ "ms": currentDt, "value": srb.valueAtMs(currentDt, rainfallData)});
-        rainfallData.push({ "ms": currentDt + accurateMs - 1, "value": srb.valueAtMs(currentDt + accurateMs - 1, rainfallData)});
-        rainfallData.push({ "ms": currentDt + accurateMs , "value": srb.valueAtMs(currentDt + accurateMs - 1, rainfallData)});
+    createRainfallGraph: function (rainfallData, element, currentDt, accurateMs) {
+        rainfallData.push({"ms": currentDt - 1, "value": srb.valueAtMs(currentDt - 1, rainfallData)});
+        rainfallData.push({"ms": currentDt, "value": srb.valueAtMs(currentDt, rainfallData)});
+        rainfallData.push({
+            "ms": currentDt + accurateMs - 1,
+            "value": srb.valueAtMs(currentDt + accurateMs - 1, rainfallData)
+        });
+        rainfallData.push({
+            "ms": currentDt + accurateMs,
+            "value": srb.valueAtMs(currentDt + accurateMs - 1, rainfallData)
+        });
 
         // Sort fillLevel
-        rainfallData = rainfallData.sort(function(a, b) {
+        rainfallData = rainfallData.sort(function (a, b) {
             return a.ms - b.ms;
         });
 
@@ -1032,25 +2013,29 @@ var srb = {
         });
     },
 
-    createTimeline: function(timelineData, element, now) {
+    createTimeline: function (timelineData, element, now) {
         var e = $(element);
 
         e.html("");
 
-        for(var i = 0; i < timelineData.length; i++) {
+        for (var i = 0; i < timelineData.length; i++) {
             var t = timelineData[i];
 
-            if(t.type === "event") {
+            if (t.type === "event") {
                 e.append('<li class="event"><strong>' + moment(t.ms).format('H:mm') + '</strong><br>' + t.value + '</li>');
             }
 
-            if(t.type === "fillLevel") {
+            if (t.type === "fillLevel") {
                 e.append('<li class="fillLevel">' + Math.round((t.value / srb.bufferCapacity) * 100) + ' % full</li>')
             }
 
-            if(t.ms < now && i < timelineData.length-1 && timelineData[i+1].ms > now) {
+            if (t.ms < now && i < timelineData.length - 1 && timelineData[i + 1].ms > now) {
                 e.append('<li class="now">now</li>');
             }
         }
     }
+};
+
+var srbSetup = {
+
 };
