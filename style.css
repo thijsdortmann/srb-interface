@@ -29,8 +29,11 @@ body {
     font-size: 14px;
     font-weight: bold;
     transition: 0.5s;
-    cursor: pointer;
     outline: none;
+}
+
+#notificationCollapser {
+    cursor: default;
 }
 
 #srb__status-container #notifications {
@@ -61,7 +64,7 @@ body {
 
 #status-indicator:hover {
     text-decoration: none;
-    box-shadow: inset 0 0 10px 2px rgba(255,255,255,1);
+    /*box-shadow: inset 0 0 10px 2px rgba(255,255,255,1);*/
 }
 
 #status-indicator.ok {
@@ -260,7 +263,6 @@ body {
     padding-left: 18px;
     margin-right: 5px;
     margin-bottom: 3px;
-    cursor: pointer;
     display: inline-block;
 }
 .ct-legend li:before {
