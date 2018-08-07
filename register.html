@@ -40,19 +40,36 @@
                     <div class="card-body">
                         <form>
                             <div class="form-group">
-                                <label for="exampleInputEmail1">Email address</label>
-                                <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Enter email">
-                                <small id="emailHelp" class="form-text text-muted">We'll never share your email with anyone else.</small>
+                                <label for="user">User name</label>
+                                <input type="text" class="form-control" id="user" placeholder="Enter username">
                             </div>
                             <div class="form-group">
-                                <label for="exampleInputPassword1">Password</label>
-                                <input type="password" class="form-control" id="exampleInputPassword1" placeholder="Password">
+                                <label for="password">Password</label>
+                                <input type="password" class="form-control" id="password" placeholder="Enter password">
                             </div>
-                            <div class="form-check">
-                                <input type="checkbox" class="form-check-input" id="exampleCheck1">
-                                <label class="form-check-label" for="exampleCheck1">Check me out</label>
+                            <div class="form-group">
+                                <label for="repeat-password">Repeat Password</label>
+                                <input type="password" class="form-control" id="repeat-password" placeholder="Enter password again">
                             </div>
-                            <button type="submit" class="btn btn-primary">Submit</button>
+
+                            <hr>
+
+                            <div class="form-group">
+                                <label for="serial">Smart Rainwater Buffer Serial number</label>
+                                <input type="text" class="form-control" id="serial" aria-describedby="emailHelp" placeholder="Enter serial number">
+                            </div>
+
+                            <hr>
+
+                            <div class="form-group">
+                                <label for="serial">Street and number</label>
+                                <input type="text" class="form-control" id="street" aria-describedby="emailHelp" placeholder="Enter your street and house number">
+                            </div>
+                            <div class="form-group">
+                                <label for="serial">City</label>
+                                <input type="text" class="form-control" id="city" aria-describedby="emailHelp" placeholder="Enter your city">
+                            </div>
+                            <button id='submit' type="submit" class="btn btn-primary">Submit</button>
                         </form>
                     </div>
                 </div>
@@ -69,8 +86,7 @@
 </footer>
 <!-- Optional JavaScript -->
 <!-- jQuery first, then Popper.js, then Bootstrap JS -->
-<script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
-        integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
+<script src="https://code.jquery.com/jquery-3.3.1.min.js"
         crossorigin="anonymous"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js"
         integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49"
@@ -82,11 +98,62 @@
 
 <script src="assets/js/srb.js"></script>
 
-<script>
-    $(document).ready(function () {
-        srb.init();
+<script type="text/javascript">
+    $(document).ready(function() {
+        $("#submit").click(function(e) {
+            e.preventDefault();
+
+            if($("#password").val() !== $("#repeat-password").val()) {
+                alert("The entered passwords do not match!");
+                return;
+            }
+
+            if($("#user").val().length === 0 || $("#password").val().length === 0 || $("#serial").val().length === 0) {
+                alert("Not all required data has been entered.");
+                return;
+            }
+
+            $.ajax({
+                dataType: "jsonp",
+                jsonpCallback: "handleLatLon",
+                url: "https://nominatim.openstreetmap.org/search",
+                data: {
+                    'street': $("#street").val(),
+                    'city': $("#city").val(),
+                    'format': 'json',
+                    'addressdetails': 1,
+                    'limit': 1,
+                    'json_callback': "handleLatLon"
+                },
+                success: function(data) {
+                    if(data.length > 0) {
+                        var d = {
+                            'user': $("#user").val(),
+                            'password': $("#password").val(),
+                            'serial': $("#serial").val(),
+                            'latitude': data[0].lat.replace('.', ','),
+                            'longitude': data[0].lon.replace('.', ',')
+                        };
+
+                        $.ajax({
+                            dataType: "text",
+                            method: "POST",
+                            url: "http://ut147284.ewi.utwente.nl:23450/prod/registersensorsystem/" + d.serial + "/1/" + d.latitude + "/" + d.longitude + "/" + d.user + "/" + d.password
+                        });
+                        console.log(submitData);
+                    } else {
+                        alert("The address entered is not correct.");
+                    }
+                },
+                error: function() {
+                    alert("An error occured while processing your address.");
+                }
+            });
+        });
+
     });
 </script>
+</body>
 
 
 </body>
