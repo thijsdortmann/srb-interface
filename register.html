@@ -138,7 +138,7 @@
                         $.ajax({
                             dataType: "text",
                             method: "POST",
-                            url: "http://ut147284.ewi.utwente.nl:23450/prod/registersensorsystem/" + d.serial + "/1/" + d.latitude + "/" + d.longitude + "/" + d.user + "/" + d.password
+                            url: "getdata.php?q=/prod/registersensorsystem/" + d.serial + "/1/" + d.latitude + "/" + d.longitude + "/" + d.user + "/" + d.password
                         });
                         console.log(submitData);
                     } else {
