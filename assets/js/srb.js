@@ -3,18 +3,12 @@ var srb = {
     bufferCapacity: 300,
 
     init: function () {
-        this.setCurrentLevel(100, 200);
-
         var urlParams = new URLSearchParams(window.location.search);
 
         if(!urlParams.has('id')) window.location.replace("login.html");
 
         var bufferId = urlParams.get('id');
         var typeId = 1;
-
-        var demoUserBuffered = 64000;
-
-        var demoAvgBuffered = 460000;
 
         if ($(window).width() < 480) {
             $("#notificationCollapsible").addClass("collapse");
@@ -117,7 +111,6 @@ var srb = {
     },
 
     setBufferInfo: function (infoData, element) {
-        console.log(infoData);
         $("#address").text(infoData.address);
         $("#wTemperature").html(infoData.waterTemp + " &#8451;");
 

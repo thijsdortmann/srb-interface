@@ -1,8 +1,8 @@
 <?php
 
-$dataRepo = "http://ut147284.ewi.utwente.nl:23450/";
+include('config.php');
 
-$response = @file_get_contents($dataRepo . $_GET['q']);
+$response = @file_get_contents($config['dataRepo'] . $_GET['q']);
 
 if(!$response) http_response_code(500);
 

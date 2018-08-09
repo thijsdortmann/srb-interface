@@ -1,0 +1,11 @@
+<?php
+
+/**
+ * User Interface for Smart Rainwater Buffer
+ * (c) Thijs Dortmann, University of Twente, 2018
+ *
+ * In this configuration file, the URL to the data repository needs to be added.
+ * Fill in the URL to the data repository (with trailing slash) into the $config['dataRepo'] variable below
+ */
+
+$config['dataRepo'] = "http://datarepo/";
